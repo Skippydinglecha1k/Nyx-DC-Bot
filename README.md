@@ -13,6 +13,28 @@ A multi-purpose Discord bot built with Python and discord.py.
 - **Leveling** – members earn XP for chatting (with an anti-spam cooldown), get level-up messages, and can check `/rank` and `/leaderboard`
 - **Slash commands** – modern `/` commands, with admin-only commands hidden from regular members
 
+## Screenshots
+
+**Ticket panel** – members click the button to open a private ticket
+
+![Ticket panel with an Open ticket button](docs/screenshots/ticket-panel.png)
+
+**Ticket channel** – a private channel only the member and staff can see
+
+![A new ticket channel with a Close ticket button](docs/screenshots/ticket-channel.png)
+
+**Mod log** – opening and closing tickets is recorded automatically
+
+![Ticket opened and Ticket closed entries in the mod log](docs/screenshots/mod-log.png)
+
+**Level-up message**
+
+![Nyx announcing that a member reached level 1](docs/screenshots/level-up.png)
+
+**Leaderboard**
+
+![The /leaderboard command showing the top members by XP](docs/screenshots/leaderboard.png)
+
 ## Commands
 
 | Command | What it does | Who can use it |

@@ -9,3 +9,6 @@ __pycache__/
 .vscode/
 venv/
 .venv/
+
+# Local database (leveling XP) - live server data, don't upload
+*.db

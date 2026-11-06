@@ -10,6 +10,7 @@ A multi-purpose Discord bot built with Python and discord.py.
 - **Moderation** – `/kick`, `/timeout`, and `/clear`, with role-hierarchy safety checks
 - **Mod log** – every moderation action is recorded in a private channel
 - **Tickets** – members open private support channels with a button; staff close them, and everything is logged
+- **Leveling** – members earn XP for chatting (with an anti-spam cooldown), get level-up messages, and can check `/rank` and `/leaderboard`
 - **Slash commands** – modern `/` commands, with admin-only commands hidden from regular members
 
 ## Commands
@@ -24,6 +25,8 @@ A multi-purpose Discord bot built with Python and discord.py.
 | `/timeout` | Temporarily mutes a member | Timeout Members |
 | `/clear` | Deletes recent messages | Manage Messages |
 | `/ticketpanel` | Posts the "Open ticket" button | Administrator |
+| `/rank` | Shows a member's level, XP, and server rank | Everyone |
+| `/leaderboard` | Shows the top 10 members by XP | Everyone |
 
 ## Setup
 
@@ -46,4 +49,5 @@ bot.py              main bot, welcome messages, general commands
 cogs/roles.py       button roles
 cogs/moderation.py  moderation commands and mod log
 cogs/tickets.py     ticket panel, private ticket channels, close button
+cogs/leveling.py    XP, levels, /rank and /leaderboard (saved in nyx.db)
 ```

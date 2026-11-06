@@ -27,6 +27,7 @@ class NyxBot(commands.Bot):
      async def setup_hook(self):
         await self.load_extension("cogs.roles")
         await self.load_extension("cogs.moderation")
+        await self.load_extension("cogs.tickets")
         if GUILD_ID:
             guild = discord.Object(id=int(GUILD_ID))
             self.tree.copy_global_to(guild=guild)

@@ -51,3 +51,16 @@ cogs/moderation.py  moderation commands and mod log
 cogs/tickets.py     ticket panel, private ticket channels, close button
 cogs/leveling.py    XP, levels, /rank and /leaderboard (saved in nyx.db)
 ```
+
+## How it's built
+
+Nyx is written in Python with [discord.py](https://discordpy.readthedocs.io/). Each feature lives in its own cog, so features can be added, removed, or customized for a server without touching the rest of the bot.
+
+Some technical choices:
+
+- **Buttons that survive restarts.** Every button has a fixed `custom_id`, and its view is registered again with `bot.add_view()` on startup, so old role menus, ticket panels, and close buttons keep working.
+- **No database needed for tickets.** Each ticket channel's topic stores its owner's ID, so Nyx can still tell whose ticket it is after a restart.
+- **Leveling with SQLite.** XP is saved per server in a local SQLite file using Python's built-in `sqlite3`, so one bot can run in several servers without mixing their data. Levels are calculated from total XP instead of being stored.
+- **Minimal permissions.** Nyx doesn't use the privileged message content intent, because leveling only needs to know *that* someone sent a message, not what it says.
+
+I develop with AI pair-programming tools. I design, test, and maintain every feature myself, and I can explain how each part works.

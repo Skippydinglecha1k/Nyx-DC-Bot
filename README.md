@@ -1,0 +1,46 @@
+# Nyx
+
+A multi-purpose Discord bot built with Python and discord.py.
+
+## Features
+
+- **Welcome messages** – greets new members with a custom embed
+- **Auto-roles** – gives new members a starter role automatically
+- **Button roles** – members click buttons to add or remove roles, and the buttons keep working after restarts
+- **Moderation** – `/kick`, `/timeout`, and `/clear`, with role-hierarchy safety checks
+- **Mod log** – every moderation action is recorded in a private channel
+- **Slash commands** – modern `/` commands, with admin-only commands hidden from regular members
+
+## Commands
+
+| Command | What it does | Who can use it |
+|---|---|---|
+| `/ping` | Checks if the bot is online | Everyone |
+| `/userinfo` | Shows a member's roles, join date, and account age | Everyone |
+| `/rolemenu` | Posts the role picker buttons | Manage Roles |
+| `/testwelcome` | Previews the welcome message | Manage Server |
+| `/kick` | Kicks a member | Kick Members |
+| `/timeout` | Temporarily mutes a member | Timeout Members |
+| `/clear` | Deletes recent messages | Manage Messages |
+
+## Setup
+
+1. Install Python 3.10 or newer.
+2. Install the requirements:
+   ```
+   python -m pip install -r requirements.txt
+   ```
+3. Copy `.env.example` to `.env` and fill in your bot token and server ID.
+4. In your server, create a `#welcome` channel, a `#mod-log` channel, a `Member` role, and the roles listed in `cogs/roles.py`. Keep the bot's role above all of them.
+5. Run the bot:
+   ```
+   python bot.py
+   ```
+
+## Project structure
+
+```
+bot.py              main bot, welcome messages, general commands
+cogs/roles.py       button roles
+cogs/moderation.py  moderation commands and mod log
+```

@@ -1,1 +1,11 @@
-/.env
+# Secrets - NEVER upload these
+.env
+
+# Python junk
+__pycache__/
+*.pyc
+
+# Editor and virtual environment folders
+.vscode/
+venv/
+.venv/
